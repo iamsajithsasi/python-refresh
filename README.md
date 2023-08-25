@@ -1,5 +1,5 @@
 # Codes
-`python
+`py
 
 sampleString = 'Hello world';
 print(sampleString[:3]) # Hel
