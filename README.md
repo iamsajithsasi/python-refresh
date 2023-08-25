@@ -1,3 +1,57 @@
+# Codes
+`python
+
+sampleString = 'Hello world';
+print(sampleString[:3]) # Hel
+print(sampleString[2:3]) # l
+print(sampleString[2:]) # llo world
+
+print(sampleString.upper())
+print(sampleString.lower())
+print(sampleString.strip())
+print(sampleString.replace('l', 'e')) # Heeeo wored
+print(sampleString.split(' ')) # ['Hello', 'world']
+
+sampleString = 'Hello {}'
+print(sampleString.format("World")) # Hello World
+sampleString = 'Hello {} {}'
+print(sampleString.format("My", "World")) # Hello My World
+
+sampleString = 'Hello world';
+print(sampleString.find("wo")) # 6: index from 0
+
+print(bool("Hello"))    # True
+print(bool(15))         # True
+print(bool("Hello"))    # True
+print(bool(''))         # False
+print(bool(None))       # False
+print(bool([]))         # False
+print(bool([1,2]))      # True
+print(bool({}))         # False
+
+print(isinstance(sampleString, int)) # False
+print(isinstance(sampleString, str)) # True
+
+myList = ["apple", "banana", "cherry"]
+print(isinstance(myList, list)) # True
+print(len(myList)) # 3
+
+"""
+List        ordered and changeable.               Allows duplicate.
+Tuple       ordered and unchangeable.             Allows duplicate.
+Set         unordered, unchangeable*, unindexed.  No duplicate.
+Dictionary  ordered** and changeable.             No duplicate.
+"""
+
+
+
+
+
+
+
+
+`
+
 # Python Refresh from basics
 ```
 # Int
