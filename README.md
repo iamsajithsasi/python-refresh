@@ -1,18 +1,18 @@
 # Codes
 ```
 sampleString = 'Hello world';
-sampleString[:3] # Hel
-sampleString[2:3] # l
-sampleString[2:] # llo world
+sampleString[:3]   # Hel
+sampleString[2:3]  # l
+sampleString[2:]   # llo world
 
 sampleString.upper()
 sampleString.lower()
 sampleString.strip()
-sampleString.replace('l', 'e') # Heeeo wored
-sampleString.split(' ') # ['Hello', 'world']
+sampleString.replace('l', 'e')   # Heeeo wored
+sampleString.split(' ')          # ['Hello', 'world']
 
 sampleString = 'Hello {}'
-sampleString.format("World") # Hello World
+sampleString.format("World")       # Hello World
 sampleString = 'Hello {} {}'
 sampleString.format("My", "World") # Hello My World
 
@@ -28,8 +28,8 @@ bool([])         # False
 bool([1,2])      # True
 bool({})         # False
 isinstance(sampleString, int) # False
-isinstance(sampleString, str) 
-isinstance([], list) # True
+isinstance(sampleString, str) # True
+isinstance([], list)          # True
 
 """
 List    ordered and changeable.               Allows duplicate.
@@ -39,23 +39,33 @@ Dict    ordered** and changeable.             No duplicate.
 """
 
 myList = ["a", "b", "c"];
-myList = list(("a", "b", "a", "d")) # ['a', 'b', 'a', 'd']
-len(myList) # 4
-myList[2:3] # ['a']
-myList[-3] # b
-# myList[10] # list index out of range
-"a" in myList # True
+myList = list(("a", "b", "a", "d"))   # ['a', 'b', 'a', 'd']
+len(myList)                           # 4
+myList[2:3]                           # ['a']
+myList[-3]                            # b
+# myList[10]                          # list index out of range
+"a" in myList                         # True
 
-myList[2] = "c" # ['a', 'b', 'c', 'd']
-myList.insert(2, "insert") # ['a', 'b', 'insert', 'c', 'd']
-myList.remove("insert") # ['a', 'b', 'c', 'd']
-myList.append("e") # ['a', 'b', 'c', 'd', 'e']
+myList[2] = "c"              # ['a', 'b', 'c', 'd']
+myList.insert(2, "insert")   # ['a', 'b', 'insert', 'c', 'd']
+myList.remove("insert")      # ['a', 'b', 'c', 'd']
+myList.append("e")           # ['a', 'b', 'c', 'd', 'e']
 
 myList.extend(['a', 'f']) # ['a', 'b', 'c', 'd', 'e', 'a', 'f']
-myList.pop(5) # ['a', 'b', 'c', 'd', 'e', 'f']
-myList.pop() # ['a', 'b', 'c', 'd', 'e']
+myList.pop(5)             # ['a', 'b', 'c', 'd', 'e', 'f']
+myList.pop()              # ['a', 'b', 'c', 'd', 'e']
+newList = myList.copy()
+
+for ch in myList: print(ch)                   # a b c d e
+for ch_idx in range(len(myList)): print(ch)   # 0 1 2 3 4
+
+newList = [ch for ch in myList]                          # ['a', 'b', 'c', 'd', 'e']
+newList = [ch for ch in myList if ch != 'e']             # ['a', 'b', 'c', 'd']
+newList = [ch  if ch == 'e' else '2' for ch in myList]   # ['2', '2', '2', '2', 'e']
+newList = [ch  if ch != 'e' else '2'for ch in myList]    # ['a', 'b', 'c', 'd', '2']
 
 myList.clear() # []
+del myList
 
 ```
 
