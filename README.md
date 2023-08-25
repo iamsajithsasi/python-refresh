@@ -1,5 +1,5 @@
 # Codes
-`py
+```
 
 sampleString = 'Hello world';
 print(sampleString[:3]) # Hel
@@ -50,7 +50,7 @@ Dictionary  ordered** and changeable.             No duplicate.
 
 
 
-`
+```
 
 # Python Refresh from basics
 ```
