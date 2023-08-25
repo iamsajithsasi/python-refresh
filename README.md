@@ -39,6 +39,7 @@ Dict    ordered** and changeable.             No duplicate.
 """
 
 ### List
+
 myList = ["a", "b", "c"];
 myList = list(("a", "b", "a", "d"))   # ['a', 'b', 'a', 'd']
 len(myList)                           # 4
@@ -79,8 +80,16 @@ myList.clear() # []
 del myList
 
 ### Tuple
+myTuple = ('a', 'b', 'c')         # ('a', 'b', 'c')
+myTuple = tuple(('a', 'b', 'c'))  # ('a', 'b', 'c')
+len(myTuple) # 3
+myList = list(myTuple);
+(a, *b) = myTuple # a -> a ; b -> [b, c]
+myTuple = aTuple + bTuple
 
-
+### sets
+chSet = {'a', 'b', 'c'}
+set((myTuple))
 ```
 
 # Python Refresh from basics
