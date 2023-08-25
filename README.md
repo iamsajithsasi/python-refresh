@@ -38,6 +38,7 @@ Set     unordered, unchangeable*, unindexed.  No duplicate.
 Dict    ordered** and changeable.             No duplicate.
 """
 
+### List
 myList = ["a", "b", "c"];
 myList = list(("a", "b", "a", "d"))   # ['a', 'b', 'a', 'd']
 len(myList)                           # 4
@@ -54,7 +55,9 @@ myList.append("e")           # ['a', 'b', 'c', 'd', 'e']
 myList.extend(['a', 'f']) # ['a', 'b', 'c', 'd', 'e', 'a', 'f']
 myList.pop(5)             # ['a', 'b', 'c', 'd', 'e', 'f']
 myList.pop()              # ['a', 'b', 'c', 'd', 'e']
+
 newList = myList.copy()
+newList = list(myList)
 
 for ch in myList: print(ch)                   # a b c d e
 for ch_idx in range(len(myList)): print(ch)   # 0 1 2 3 4
@@ -64,8 +67,19 @@ newList = [ch for ch in myList if ch != 'e']             # ['a', 'b', 'c', 'd']
 newList = [ch  if ch == 'e' else '2' for ch in myList]   # ['2', '2', '2', '2', 'e']
 newList = [ch  if ch != 'e' else '2'for ch in myList]    # ['a', 'b', 'c', 'd', '2']
 
+myList.sort() # abc 123
+myList.sort(reverse=True)
+myList.sort(key=sortFn) 
+myList.sort(key = str.lower) # sort uppercase as lowercase
+
+myList.extend(newList)
+myList + newList
+
 myList.clear() # []
 del myList
+
+### Tuple
+
 
 ```
 
