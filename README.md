@@ -1,54 +1,61 @@
 # Codes
 ```
-
 sampleString = 'Hello world';
-print(sampleString[:3]) # Hel
-print(sampleString[2:3]) # l
-print(sampleString[2:]) # llo world
+sampleString[:3] # Hel
+sampleString[2:3] # l
+sampleString[2:] # llo world
 
-print(sampleString.upper())
-print(sampleString.lower())
-print(sampleString.strip())
-print(sampleString.replace('l', 'e')) # Heeeo wored
-print(sampleString.split(' ')) # ['Hello', 'world']
+sampleString.upper()
+sampleString.lower()
+sampleString.strip()
+sampleString.replace('l', 'e') # Heeeo wored
+sampleString.split(' ') # ['Hello', 'world']
 
 sampleString = 'Hello {}'
-print(sampleString.format("World")) # Hello World
+sampleString.format("World") # Hello World
 sampleString = 'Hello {} {}'
-print(sampleString.format("My", "World")) # Hello My World
+sampleString.format("My", "World") # Hello My World
 
 sampleString = 'Hello world';
-print(sampleString.find("wo")) # 6: index from 0
+sampleString.find("wo") # 6: index from 0
 
-print(bool("Hello"))    # True
-print(bool(15))         # True
-print(bool("Hello"))    # True
-print(bool(''))         # False
-print(bool(None))       # False
-print(bool([]))         # False
-print(bool([1,2]))      # True
-print(bool({}))         # False
-
-print(isinstance(sampleString, int)) # False
-print(isinstance(sampleString, str)) # True
-
-myList = ["apple", "banana", "cherry"]
-print(isinstance(myList, list)) # True
-print(len(myList)) # 3
+bool("Hello")    # True
+bool(15)         # True
+bool("Hello")    # True
+bool('')         # False
+bool(None)       # False
+bool([])         # False
+bool([1,2])      # True
+bool({})         # False
+isinstance(sampleString, int) # False
+isinstance(sampleString, str) 
+isinstance([], list) # True
 
 """
-List        ordered and changeable.               Allows duplicate.
-Tuple       ordered and unchangeable.             Allows duplicate.
-Set         unordered, unchangeable*, unindexed.  No duplicate.
-Dictionary  ordered** and changeable.             No duplicate.
+List    ordered and changeable.               Allows duplicate.
+Tuple   ordered and unchangeable.             Allows duplicate.
+Set     unordered, unchangeable*, unindexed.  No duplicate.
+Dict    ordered** and changeable.             No duplicate.
 """
 
+myList = ["a", "b", "c"];
+myList = list(("a", "b", "a", "d")) # ['a', 'b', 'a', 'd']
+len(myList) # 4
+myList[2:3] # ['a']
+myList[-3] # b
+# myList[10] # list index out of range
+"a" in myList # True
 
+myList[2] = "c" # ['a', 'b', 'c', 'd']
+myList.insert(2, "insert") # ['a', 'b', 'insert', 'c', 'd']
+myList.remove("insert") # ['a', 'b', 'c', 'd']
+myList.append("e") # ['a', 'b', 'c', 'd', 'e']
 
+myList.extend(['a', 'f']) # ['a', 'b', 'c', 'd', 'e', 'a', 'f']
+myList.pop(5) # ['a', 'b', 'c', 'd', 'e', 'f']
+myList.pop() # ['a', 'b', 'c', 'd', 'e']
 
-
-
-
+myList.clear() # []
 
 ```
 
