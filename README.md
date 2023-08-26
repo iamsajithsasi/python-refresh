@@ -89,7 +89,58 @@ myTuple = aTuple + bTuple
 
 ### sets
 chSet = {'a', 'b', 'c'}
-set((myTuple))
+newSet = set((myTuple))
+len(chSet)
+for ch in chSet: print(ch) # b a c
+chSet.add(d) # existing can't be changed but could add
+chSet.update({'a', 'a', 'f'}) # chset -> {'c', 'f', 'b', 'a'} join sets
+chSet.remove('b')
+chSet.remove('z') # error
+chSet.discard('z') # no error if elem not found
+chSet.pop()
+
+mySet = chSet.union({'a', 'a', 'f'}) # chset is not mutated
+mySet = chSet.intersection(mySet) # a b c -> common in both set
+mySet = chSet.symmetric_difference(mySet) # f -> not common in both set
+mySet = chSet.difference(mySet) # omit element if exist other set
+
+chSet.clear()
+del chSet
+
+### Dict
+
+myDict = {'name': 'John', 'age': 18}
+myDict = dict(name = 'John', age = 18) # {'name': 'John', 'age': 18}
+len(myDict)
+myDict.get('name') / myDict['name'] # John
+myDict.keys() # dict_keys(['name', 'age'])
+myDict.values() # dict_values(['John', 18])
+myDict.items() # dict_items([('name', 'John'), ('age', 18)])
+myDict['car'] = 'Supra'
+myDict.update({ 'country': 'IN', 'state': '' })
+myDict.pop('state')
+myDict.popitem() # remove last
+del myDict['state']
+del myDict
+myDict.clear()
+
+if 'name' in myDict: print('Yes')
+for key, value in myDict.items(): print(key, value)
+for key in myDict.keys(): print(key)
+for val in myDict.values(): print(val)
+newDict = myDict.copy() / dict(myDict)
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 
 # Python Refresh from basics
