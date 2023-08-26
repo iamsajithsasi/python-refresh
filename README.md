@@ -130,6 +130,22 @@ for key in myDict.keys(): print(key)
 for val in myDict.values(): print(val)
 newDict = myDict.copy() / dict(myDict)
 
+### Condition & Loops
+
+a = 12; b = 23;
+if b > a:
+  print('Good Evening')
+elif b == a:
+  print('Good Noon')
+elif b < a:
+  print('Good Morning')
+else:
+  print('Error')
+
+print('Day') if b < 18 else print('Night') 
+
+
+
 
 
 
