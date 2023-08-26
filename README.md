@@ -157,11 +157,11 @@ for ch in myList: print(ch)
 
 def myFunction(): print('Hello')
 
-def myFunction_args(*args): print(args[1]) # args arguments like array / rest operator
-def myFunction_kwargs(**kwargs): print(kwargs['age']) # kwargs key value pair like object
+def myFunction_args(*args): print(args[1])              # args arguments like array / rest operator
+def myFunction_kwargs(**kwargs): print(kwargs['age'])   # kwargs key value pair like object
 
-myFunction_args("John", "18") # 18
-myFunction_kwargs(name = "John", age = "18") # 18
+myFunction_args("John", "18")                 # 18
+myFunction_kwargs(name = "John", age = "18")  # 18
 
 
 
