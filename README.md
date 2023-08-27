@@ -130,6 +130,11 @@ for key in myDict.keys(): print(key)
 for val in myDict.values(): print(val)
 newDict = myDict.copy() / dict(myDict)
 
+myIterVar = ["a", "b", "c"]
+myiter = iter(myIterVar);
+next(myiter) # a
+next(myiter) # b
+
 ### Condition & Loops
 
 and/& , or/!, not/~
@@ -155,13 +160,55 @@ while a < b:
 
 for ch in myList: print(ch)
 
-def myFunction(): print('Hello')
+### Function, Lambda
 
+def myFunction(): print('Hello')
 def myFunction_args(*args): print(args[1])              # args arguments like array / rest operator
 def myFunction_kwargs(**kwargs): print(kwargs['age'])   # kwargs key value pair like object
-
 myFunction_args("John", "18")                 # 18
 myFunction_kwargs(name = "John", age = "18")  # 18
+
+def addTo(y):
+  return lambda x: print(y+x) # lambda is anonymous function
+add_10 = addTo(10);
+print(add_10(9)) # 19
+
+### Class
+
+class Breed:
+  def __init__(self, type, an_breed):
+    self.an_breed = an_breed
+
+  def breed(self):
+    print(self.type + " breed is "+ self.an_breed)
+
+class Animal(Breed):
+  
+  def __init__(self, type, breed):
+    super().__init__(type, breed)   # Inheritance
+    self.type = type          # self.type -> public
+    # self.__type = type      # self.__type -> protected
+
+  def sound(self):
+    if self.type == 'dog':
+      print(self.type + " bark")
+    elif self.type == 'cat':
+      print(self.type + " meow")
+    else:
+      print(self.type + " unknown sound")
+
+  def diet(an):
+    if an.type == 'dog':
+      print(an.type + " NonVeg")
+    else:
+      print(an.type + " unknown diet")
+
+dog = Animal('dog', 'Lab');
+dog.sound();
+dog.diet();
+dog.breed();
+
+
 
 
 
