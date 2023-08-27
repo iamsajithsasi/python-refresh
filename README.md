@@ -237,6 +237,30 @@ dog.sound();
 dog.diet();
 dog.breed();
 
+
+### File handling
+
+file = open('./demofile.txt', 'a'); # r w a:append c:create
+file.write('Text'); # appends text
+
+file = open('./demofile.txt', 'r');
+file = file.read(); # Full content / read(5)
+file = file.readline(); # Read a line
+
+file = open('./demofile.txt', 'w')
+file.write('Text'); # writes text
+
+file.close();
+
+import os
+os.remove("demofile.txt");
+os.path.exists("demofile.txt");
+os.remove("demofile.txt")
+os.rmdir("myfolder")
+
+
+
+
 ```
 # Misc
 find vs index : if substring is not found then index throw error, find return -1 
