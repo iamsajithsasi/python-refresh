@@ -1,5 +1,5 @@
 # Numpy
 
-`python
+```python
 print('hello')
-`
+```
